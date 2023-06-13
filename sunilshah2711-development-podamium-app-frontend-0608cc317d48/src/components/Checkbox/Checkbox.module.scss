@@ -1,0 +1,46 @@
+@import "../../assets/scss/variables";
+.CustomCheckbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 5px;
+  p {
+    margin-left: 10px;
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: $color-black;
+  }
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--form-background);
+    margin: 0;
+    font: inherit;
+    color: $color-blue;
+    width: 18px;
+    height: 18px;
+    border: 2px solid $color-blue;
+    border-radius: 5px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 12px;
+    height: 8px;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-image: url(../../assets/icons/check.svg);
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+}

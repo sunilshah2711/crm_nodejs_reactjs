@@ -1,0 +1,53 @@
+.Board {
+  display: flex;
+  height: 100%;
+}
+.columnContainer {
+  display: flex;
+  flex-direction: column;
+}
+.columnContainer > p {
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.columns {
+  border: 1px solid #80a9e6;
+}
+.innerColumn {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+.innerColumn::-webkit-scrollbar {
+  display: none;
+}
+.columnItem {
+  border-radius: 10px;
+  font-weight: 600;
+}
+.upper {
+  display: flex;
+}
+.lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box {
+  width: 22.6px;
+  height: 22.6px;
+  background-color: #0052cc;
+  color: white;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+}
+.date {
+  font-size: 13px;
+  font-weight: normal;
+  color: #0052cc;
+}
+.numberOfTask {
+  font-size: 13px;
+  font-weight: normal;
+}

@@ -1,0 +1,149 @@
+@import "../../assets/scss/variables";
+
+.navmain {
+  padding: 4px;
+  background-color: $color-white !important;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  .nav-logo {
+    margin-right: 20px;
+    img {
+      height: 35px;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      .nav-link {
+        font-family: $font-main;
+        font-size: 14px;
+        padding: 5px 10px;
+        transition: ease-in-out 0.3s;
+        &.active {
+          a {
+            font-weight: 500;
+            color: $color-blue;
+            text-decoration: none;
+          }
+        }
+        a {
+          font-weight: 500;
+          color: $color-black;
+          text-decoration: none;
+          transition: ease-in-out 0.3s;
+          color: #404040;
+          &:hover {
+            color: $color-blue;
+          }
+        }
+      }
+      .show {
+        background: rgba(0, 82, 204, 0.1);
+        border-radius: 5px;
+      }
+      .nav-dropdown {
+        &.show {
+          .nav-link {
+            color: $color-blue;
+          }
+        }
+        .nav-link {
+          font-weight: 500;
+          color: $color-black;
+          text-decoration: none;
+          color: #404040;
+          &::after {
+            display: none;
+          }
+          svg {
+            margin-left: 4px;
+          }
+        }
+        .dropdown-menu {
+          background: $color-white;
+          mix-blend-mode: normal;
+          box-shadow: 0px 20px 50px rgba(0, 151, 255, 0.1);
+          border: unset;
+          padding: 0 15px;
+          .dropdown-item {
+            font-size: 13px;
+            font-weight: 400;
+            padding: 8px 0;
+            padding-right: 20px;
+            transition: ease-in-out 0.5s;
+            a {
+              text-decoration: none;
+              color: unset;
+            }
+            &:last-child {
+              border: unset;
+            }
+            &:hover {
+              background-color: $color-white;
+              color: $color-blue;
+            }
+          }
+        }
+      }
+    }
+    .nav-right-bar {
+      display: flex;
+      align-items: center;
+      .nav-link {
+        padding-left: 0;
+        padding-right: 20px;
+        color: $color-blue;
+      }
+      .profile-dropdown-menu {
+        height: 28px;
+        &.show {
+          .nav-link {
+            color: $color-blue;
+          }
+        }
+        .dropdown-menu {
+          background: $color-white;
+          mix-blend-mode: normal;
+          box-shadow: 0px 20px 50px rgba(0, 151, 255, 0.1);
+          border: unset;
+          padding: 0 21px;
+          .dropdown-item {
+            font-size: 13px;
+            font-weight: 400;
+            padding: 12px 0;
+            padding-right: 20px;
+            border-bottom: 1px solid #b3ccf0;
+            transition: ease-in-out 0.5s;
+            &:last-child {
+              border: unset;
+            }
+            &:hover {
+              background-color: $color-white;
+              color: $color-blue;
+            }
+          }
+        }
+
+        button {
+          background: transparent;
+          border: unset;
+          padding: 0;
+          &::after {
+            display: none;
+          }
+          .profile-avtar {
+            width: 28px;
+            height: 28px;
+            border-radius: 5px;
+            background-color: $color-blue;
+          }
+          &:focus {
+            box-shadow: unset;
+          }
+        }
+      }
+    }
+  }
+}
